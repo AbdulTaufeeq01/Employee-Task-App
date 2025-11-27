@@ -91,3 +91,46 @@ requirements.txt        # Dependencies
 - `GET/POST /api/tasks/` - Task operations
 - `GET/PUT/DELETE /api/tasks/{id}` - Task details
 
+## 📋 Assumptions
+
+- Single-user session: Token stored in React state (not localStorage)
+- Development environment: No API rate limiting implemented
+- SQLite database: Single-file, no external setup required
+- CORS enabled for all origins to support frontend development
+- Stateless authentication: No session storage required
+
+## ✨ Bonus Features Implemented
+
+1. **Argon2 Password Hashing**
+   - Industry-standard, memory-hard algorithm
+   - More secure than bcrypt with no byte-length limitations
+   - Resistant to GPU/ASIC attacks
+
+2. **Email Validation**
+   - Real-time email format and domain validation
+   - Prevents invalid employee emails during creation
+   - Uses Pydantic `EmailStr` type
+
+3. **JWT Authentication**
+   - 1-hour token expiration for security
+   - Bearer scheme for API requests
+   - Stateless architecture
+
+4. **Cache Control Middleware**
+   - Prevents browser caching of static files
+   - Ensures fresh assets loaded during development
+   - Sets proper Cache-Control, Pragma, and Expires headers
+
+5. **React Without Build Tools**
+   - CDN-loaded React 18 with no npm/webpack needed
+   - Pure `React.createElement()` API (no JSX transpilation required)
+   - Zero build step - edit and refresh
+
+6. **Real-time Data Refresh**
+   - Automatic list updates after create/update/delete operations
+   - Seamless user experience without manual refresh
+
+7. **Comprehensive Error Handling**
+   - Try-catch blocks in all async operations
+   - User-friendly error messages displayed in UI
+   - Console logging for debugging
