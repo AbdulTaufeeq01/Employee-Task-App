@@ -352,3 +352,12 @@ This is a demonstration project. Feel free to:
 - Add unit tests
 - Implement database migrations
 - Add role-based access control (RBAC)
+
+## 📄 License
+
+This project is provided as-is for educational and demonstration purposes.
+
+---
+
+**Created**: November 2025
+**Version**: 1.1

@@ -29,9 +29,9 @@ class EmployeeCreate(EmployeeBase):
     pass
 
 class EmployeeUpdate(BaseModel):
-    name: Optional[str]
-    email: Optional[EmailStr]
-    role: Optional[str]
+    name: Optional[str] = None
+    email: Optional[EmailStr] = None
+    role: Optional[str] = None
 
 class TaskInEmployee(BaseModel):
     id: int
@@ -60,11 +60,11 @@ class TaskCreate(TaskBase):
     pass
 
 class TaskUpdate(BaseModel):
-    title: Optional[str]
-    description: Optional[str]
-    status: Optional[str]
-    due_date: Optional[datetime]
-    employee_id: Optional[int]
+    title: Optional[str] = None
+    description: Optional[str] = None
+    status: Optional[str] = None
+    due_date: Optional[datetime] = None
+    employee_id: Optional[int] = None
 
 class EmployeeInTask(BaseModel):
     id: int
