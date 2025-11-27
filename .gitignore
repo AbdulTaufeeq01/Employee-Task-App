@@ -40,6 +40,9 @@ wheels/
 *.sqlite3
 app/database.db
 
+# Directories
+screenshots/
+
 # Environment variables
 .env
 .env.local
